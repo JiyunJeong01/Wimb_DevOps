@@ -4,7 +4,7 @@ pipeline {
         PROJECT_ID = 'SungshinServerPj'
         CLUSTER_NAME = 'k8s'
         LOCATION = 'asia-northeast3-a'
-        CREDENTIALS_ID = '464b4413-8a66-4df2-82e4-c3e8c0661bce'
+        CREDENTIALS_ID = '8df2a4e9-7b5c-410f-abf0-8a13a0ac0172'
     }
     stages {
         stage("Checkout code") {
