@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wimb-devops-deployment
+  labels:
+    app: wimb-devops
+spec:
+  replicas: 3
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: wimb-devops
+  template:
+    metadata:
+      labels:
+        app: wimb-devops
+        tier: wimb-devops
+    spec:
+      containers:
+      - name: wimb-devops-container
+        image: jiyunjeong/wimb-devops:latest
+        ports:
+        - containerPort: 5000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: wimb-devops-service
+  labels:
+    app: wimb-devops
+spec:
+  ports:
+  - port: 80
+    targetPort: 5000
+  selector:
+    app: wimb-devops
+    tier: wimb-devops
+  type: LoadBalancer
