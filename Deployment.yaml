@@ -20,8 +20,6 @@ spec:
       containers:
       - name: wimb-devops-container
         image: jiyunjeong/wimb-devops:latest
-        command: ["/bin/sh", "-c"]
-        args: ["sleep 600; exec python app.py"]
         ports:
         - containerPort: 5000
 ---
