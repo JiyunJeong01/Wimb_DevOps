@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        PROJECT_ID = 'SungshinServerPj'
+        PROJECT_ID = 'sungshinserverpj'
         CLUSTER_NAME = 'k8s'
         LOCATION = 'asia-northeast3-a'
         CREDENTIALS_ID = '8df2a4e9-7b5c-410f-abf0-8a13a0ac0172'
