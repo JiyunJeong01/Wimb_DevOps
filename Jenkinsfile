@@ -1,8 +1,8 @@
 pipeline {
     agent any
     environment {
-        PROJECT_ID = 'daring-emitter-344207'
-        CLUSTER_NAME = 'kube'
+        PROJECT_ID = 'SungshinServerPj'
+        CLUSTER_NAME = 'k8s'
         LOCATION = 'asia-northeast3-a'
         CREDENTIALS_ID = '464b4413-8a66-4df2-82e4-c3e8c0661bce'
     }
